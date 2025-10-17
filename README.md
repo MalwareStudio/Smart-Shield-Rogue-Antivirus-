@@ -27,6 +27,13 @@ Please do not try to launch "smart_shield.exe" alone. The rogue must be installe
 
 You can find the installer here →  "Smart-Shield\Rogue_Installer\Rogue_Installer\bin\Release" then search for "smart_shieldx64_setup.exe" and there you have it!
 
+Download the "smart_shieldx64_setup.exe", drop it wherever you want to and run it. 
+
+> [!NOTE]
+> You don't need to get other files from this repository.
+>
+> The rogue has everytrhing inside. When you run it, it extracts its resources and changes settings on your system.
+
 ## How it works ⚙️?
 Once the user allow this rogue to install itself, it will set the rogue as a startup application. This is done by registry, startup folder and lastly task scheduler. To make it even more confusing, the rogue creates multiple copies of itself with random names and those copies will be stored in random directories. Later the rogues changes file attributes of these decoy files to hidden. The only way to see these files is to enable "Show hidden files, folders, and drives" option and uncheck the option "Hide protected operating system files (Recommended)" inside "File Explorer Options".
 
