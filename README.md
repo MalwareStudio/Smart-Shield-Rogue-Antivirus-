@@ -1,2 +1,2 @@
 # Smart-Shield
-none
+This project was created for educational and entertaiment purposes only.
