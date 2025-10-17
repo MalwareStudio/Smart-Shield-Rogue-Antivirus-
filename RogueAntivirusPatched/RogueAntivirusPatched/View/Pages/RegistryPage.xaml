@@ -1,0 +1,110 @@
+﻿<Page x:Class="RogueAntivirusPatched.View.Pages.RegistryPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RogueAntivirusPatched.View.Pages"
+      xmlns:viewModel="clr-namespace:RogueAntivirusPatched.ViewModel"
+      xmlns:userControl="clr-namespace:RogueAntivirusPatched.View.CustomUserControl"
+      mc:Ignorable="d" 
+      d:DesignHeight="470" d:DesignWidth="800"
+      Title="RegistryPage"
+      Loaded="Page_Loaded"
+      d:DataContext="{d:DesignInstance viewModel:vmRegistry, IsDesignTimeCreatable=True}">
+    <Page.Resources>
+        <Style TargetType="TextBlock" BasedOn="{StaticResource PageFont}"/>
+        <Style TargetType="CheckBox" BasedOn="{StaticResource CustomCheckBoxStyle}">
+            <Setter Property="Margin" Value="20 0 0 5"/>
+        </Style>
+    </Page.Resources>
+    
+    <Grid>
+        <Border Background="{StaticResource PageBackground}"/>
+        <Grid>
+
+            <Image Width="150" Height="150" Source="{StaticResource Registry}"
+                   VerticalAlignment="Bottom" Margin="10"/>
+
+            <StackPanel Margin="10" IsEnabled="{Binding ToggleButtons}">
+                <TextBlock Text="Scanning Mode" Margin="0 0 0 5"/>
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                    <userControl:CustomRadialButton SetIsChecked="{Binding IsStandard, Mode=TwoWay}"
+                                                    SetGroupName="ScanningMode"
+                                                    SetIsEnabled="{Binding ToggleButtons}"
+                                                    SetContent="Standard"
+                                                    Margin="0 0 10 0"/>
+                    <userControl:CustomRadialButton SetIsChecked="{Binding IsAdvanced, Mode=TwoWay}"
+                                SetGroupName="ScanningMode"
+                                SetIsEnabled="{Binding ToggleButtons}"
+                                SetContent="Advanced"
+                                PreviewMouseDown="AdvancedBtn_Click"/>
+                </StackPanel>
+                
+                <TextBlock Text="Useless Registry" Margin="0 0 0 5"/>
+                <CheckBox IsChecked="{Binding IsEmptyData, UpdateSourceTrigger=PropertyChanged}" Content="{Binding ContentEmptyData, UpdateSourceTrigger=PropertyChanged}"/>
+                <CheckBox IsChecked="{Binding IsSharedDll, UpdateSourceTrigger=PropertyChanged}" Content="{Binding ContentSharedDll, UpdateSourceTrigger=PropertyChanged}"/>
+                <CheckBox IsChecked="{Binding IsAppPaths, UpdateSourceTrigger=PropertyChanged}" Content="{Binding ContentAppPaths, UpdateSourceTrigger=PropertyChanged}"/>
+                <CheckBox Click="UnusedBox_Click" IsChecked="{Binding IsUnused, UpdateSourceTrigger=PropertyChanged}" Content="{Binding ContentUnused, UpdateSourceTrigger=PropertyChanged}"/>
+                <CheckBox Click="InvalidBox_Click" IsChecked="{Binding IsInvalidUninstaller, UpdateSourceTrigger=PropertyChanged}" Content="{Binding ContentInvalidUninstaller, UpdateSourceTrigger=PropertyChanged}"/>
+                <CheckBox Click="StartupBox_Click"  IsChecked="{Binding IsRunAtStart, UpdateSourceTrigger=PropertyChanged}" Content="{Binding ContentRunAtStart, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Margin="10">
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                    <ProgressBar Style="{StaticResource CustomProgressBar}"
+                                 Width="470"
+                                 Value="{Binding ProgressBarValue, UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBlock Text="{Binding ProgressBarContent, UpdateSourceTrigger=PropertyChanged}" 
+                               Margin="10 0 0 0"/>
+                </StackPanel>
+
+                <Border BorderBrush="{StaticResource LightBlueFade}"
+                        BorderThickness="2"
+                        CornerRadius="5"
+                        Margin="0 0 0 5">
+                    <StackPanel Margin="10">
+                        <TextBlock Text="{Binding AboutProgress, UpdateSourceTrigger=PropertyChanged}" 
+                                   FontSize="16" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding ProgressDetails, UpdateSourceTrigger=PropertyChanged}"
+                                   FontSize="12"
+                                   Foreground="{StaticResource WhiteFade}"/>
+                    </StackPanel>
+                </Border>
+
+                <Border BorderBrush="{StaticResource LightBlueFade}"
+                        BorderThickness="2"
+                        CornerRadius="5">
+                    <StackPanel Margin="10">
+                        <TextBlock Text="Detected Registry Files"
+                                   FontWeight="Bold"
+                                   Margin="0 0 0 10"/>
+
+                        <DataGrid x:Name="RegistryGrid" Style="{StaticResource CustomDataGrid}" 
+                                ItemsSource="{Binding RegistryInfo, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"
+                                Height="250"/>
+                    </StackPanel>
+                </Border>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Margin="0 10 0 0">
+                    <userControl:CommonButton 
+                            PreviewMouseLeftButtonDown="AnalyzeBtn_Click"
+                            SetIsEnabled="{Binding CanAnalyze}"
+                            SetContent="Analyze" 
+                            Margin="0 0 50 0"/>
+
+                    <userControl:CommonButton 
+                            PreviewMouseLeftButtonDown="RemoveBtn_Click"
+                            SetIsEnabled="{Binding CanRemove}"
+                            SetContent="Remove" />
+                </StackPanel>
+            </StackPanel>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="210"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+    </Grid>
+</Page>

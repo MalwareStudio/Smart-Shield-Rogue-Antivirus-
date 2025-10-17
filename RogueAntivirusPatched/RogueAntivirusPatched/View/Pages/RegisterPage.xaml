@@ -1,0 +1,77 @@
+﻿<Page x:Class="RogueAntivirusPatched.View.Pages.RegisterPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RogueAntivirusPatched.View.Pages"
+      xmlns:userControl="clr-namespace:RogueAntivirusPatched.View.CustomUserControl"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RegisterPage">
+
+    <Page.Resources>
+        <Style TargetType="TextBlock" BasedOn="{StaticResource PageFont}"/>
+    </Page.Resources>
+    
+    <Grid>
+        <Border Background="{StaticResource PageBackground}"/>
+
+        <Image Width="150" Height="150" Source="{StaticResource Keys}"
+               VerticalAlignment="Top" HorizontalAlignment="Right" Margin="10"/>
+
+        <StackPanel Margin="10">
+            <TextBlock Text="Register Now" FontSize="24"
+                       FontWeight="Black"
+                       HorizontalAlignment="Center"/>
+            <TextBlock Text="Why should you Upgrade?"
+                       FontWeight="Black"
+                       Margin="0 5 0 0"/>
+
+            <TextBlock Text="● Get full antivirus protection"
+                       Margin="0 5 0 0"/>
+            <TextBlock Text="● Manage all your registry data"/>
+            <TextBlock Text="● Get rid of all junk files"/>
+            <TextBlock Text="● All features from Antivirus Center, Junk Cleaner, and Registry Optimizer will be available"/>
+            <TextBlock Text="● In case of other problems, we are online 24/7"/>
+            <TextBlock Text="● Use the Antivirus without any restrictions (no expiration)"/>
+            <TextBlock Text="● No advertisements"/>
+
+            <Border Style="{StaticResource BlueBorder}" Height="1" Margin="0 5 0 5"/>
+
+            <TextBlock Text="What happens if you refuse to Upgrade?"
+           FontWeight="Black"/>
+            <TextBlock Text="● After 7 days, you will lose access to the Antivirus"
+                       Margin="0 5 0 0"/>
+            <TextBlock Text="● All threats will be released"/>
+            <TextBlock Text="● The system will be flooded with junk again"/>
+
+            <Border Style="{StaticResource BlueBorder}" Height="1" Margin="0 5 0 5"/>
+
+            <TextBlock Text="How to get registered?"
+                        FontWeight="Black"/>
+            
+            <StackPanel Orientation="Horizontal" Margin="0 5 0 0">
+                <TextBlock Text="To obtain the license key, it's necessary to contact us via email: "/>
+                <TextBlock Cursor="Hand"
+                           Margin="1 0 0 0">
+                    <Hyperlink Click="Hyperlink_Click" RequestNavigate="Hyperlink_Email">
+                        Contact Us
+                    </Hyperlink>
+                </TextBlock>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Our email address: rogueav2025@gmail.com (Right click to copy)"
+                           MouseRightButtonDown="CopyAddress_Click"/>
+            </StackPanel>
+
+            <TextBlock Text="Have a key already? Click on Upgrade"/>
+
+            <userControl:CommonButton SetWidth="100" SetHeight="30"
+                                      SetContent="Upgrade"
+                                      FontWeight="Black"
+                                      SetFontSize="18"
+                                      PreviewMouseLeftButtonDown="Upgrade_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

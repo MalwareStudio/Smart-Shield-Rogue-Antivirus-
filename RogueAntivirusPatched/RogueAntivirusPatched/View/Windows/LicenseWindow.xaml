@@ -1,0 +1,77 @@
+﻿<Window x:Class="RogueAntivirusPatched.View.Windows.LicenseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RogueAntivirusPatched.View.Windows"
+        xmlns:viewModel="clr-namespace:RogueAntivirusPatched.ViewModel"
+        xmlns:userControl="clr-namespace:RogueAntivirusPatched.View.CustomUserControl"
+        mc:Ignorable="d"
+        Title="{Binding WindowTitle, UpdateSourceTrigger=PropertyChanged}" Height="195" Width="600"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Topmost="True"
+        d:DataContext="{d:DesignInstance viewModel:vmLicensePage, IsDesignTimeCreatable=True}">
+    <Window.Resources>
+        <Style TargetType="TextBlock" BasedOn="{StaticResource PageFont}"/>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="{StaticResource DarkPurpleFade}"/>
+            <Setter Property="Foreground" Value="{StaticResource WhiteFade}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource LightBlueFade}"/>
+            <Setter Property="FontFamily" Value="Comic Sans Ms"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Width" Value="Auto"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Grid>
+                            <Border Background="Transparent" BorderBrush="{StaticResource LightBlueFade}"
+                                    BorderThickness="2" Height="{TemplateBinding Height}"
+                                    Width="{TemplateBinding Width}"
+                                    CornerRadius="5">
+                                <Grid VerticalAlignment="Center" HorizontalAlignment="Left">
+                                    <ScrollViewer x:Name="PART_ContentHost"
+                                        Margin="0" 
+                                        Background="Transparent" />
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Border Background="{StaticResource PageBackground}" Grid.RowSpan="2"/>
+
+        <Border BorderBrush="{StaticResource LightBlueFade}" BorderThickness="2" CornerRadius="5" Margin="10,10,10,10" Grid.RowSpan="2">
+            <StackPanel Margin="10">
+                <TextBlock Text="Insert the License Key"/>
+                <TextBox x:Name="keyTextBox" Text="0000-1111-2222-3333"
+                         PreviewKeyDown="keyTextBox_PreviewKeyDown"
+                         GotFocus="TextBox_GotFocus"
+                         LostFocus="TextBox_LostFocus"
+                         MaxLength="19"
+                         PreviewTextInput="TextBox_PreviewTextInput"
+                         DataObject.Pasting="TextBox_Pasting"
+                     Margin="0 5 0 0"/>
+
+                <userControl:CommonButton SetContent="Activate" Margin="0 10 0 0"
+                                          PreviewMouseLeftButtonDown="AntivateBtn_Click"/>
+            </StackPanel>
+        </Border>
+        <TextBlock Text="{Binding ContentKeyInsert, UpdateSourceTrigger=PropertyChanged}"
+                       Style="{StaticResource PageFontRed}"
+                       Foreground="{Binding ColorKeyInsert, UpdateSourceTrigger=PropertyChanged}"
+                       VerticalAlignment="Bottom" 
+                       HorizontalAlignment="Center"
+                       Visibility="Visible"
+                       Margin="0 0 0 -10"/>
+    </Grid>
+</Window>

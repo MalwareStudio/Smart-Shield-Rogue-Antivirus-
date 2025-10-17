@@ -1,0 +1,91 @@
+﻿<Page x:Class="RogueAntivirusPatched.View.Pages.SystemInfoPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RogueAntivirusPatched.View.Pages"
+      xmlns:viewModel="clr-namespace:RogueAntivirusPatched.ViewModel"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="SystemInfoPage"
+      Loaded="Page_Loaded"
+      d:DataContext="{d:DesignInstance viewModel:vmSystemInfoPage, IsDesignTimeCreatable=True}">
+
+    <Page.Resources>
+        <Style TargetType="TextBlock" BasedOn="{StaticResource PageFont}"/>
+        
+    </Page.Resources>
+    
+    <Grid>
+        <Border Background="{StaticResource PageBackground}"/>
+        <Grid>
+            <Grid>
+
+                <StackPanel Margin="10">
+                    <TextBlock FontWeight="Bold" FontSize="26" Text="System Information"/>
+                    <TextBlock Foreground="{StaticResource WhiteFade}" Text="Device &amp; Windows specifications"/>
+                </StackPanel>
+
+                <Border BorderBrush="{StaticResource LightBlueFade}" BorderThickness="2" 
+                        CornerRadius="5"
+                        Margin="10 70 250 10">
+
+                    <Grid>
+
+                        <ScrollViewer Style="{StaticResource CustomScrollViewer}" HorizontalScrollBarVisibility="Disabled">
+                            <StackPanel Orientation="Horizontal" Margin="10">
+
+                                <StackPanel>
+
+                                    <TextBlock Text="System" Margin="0 0 0 10"/>
+                                    <TextBlock Text="System Version" Margin="0 0 0 10"/>
+                                    <TextBlock Text="Build Number" Margin="0 0 0 10"/>
+                                    <TextBlock Text="Architecture" Margin="0 0 0 10"/>
+                                    <TextBlock Text="Username" Margin="0 0 0 10"/>
+                                    <TextBlock Text="Computer Name" Margin="0 0 0 10"/>
+                                    <TextBlock Text="Processor (CPU)" Margin="0 0 0 10"/>
+                                    <TextBlock Text="CPU Speed" Margin="0 0 0 10"/>
+                                    <TextBlock Text="CPU Cores" Margin="0 0 0 10"/>
+                                    <TextBlock Text="Computer Model" Margin="0 0 0 10"/>
+                                    <TextBlock Text="Computer Brand" Margin="0 0 0 10"/>
+                                    <TextBlock Text="Bios Version" Margin="0 0 0 10"/>
+                                    <TextBlock Text="Selected Disk" Margin="0 0 0 10"/>
+                                    <TextBlock Text="Disk Type" Margin="0 0 0 10"/>
+                                    <TextBlock Text="Disk Format" Margin="0 0 0 10"/>
+                                    <TextBlock Text="Disk Size" Margin="0 0 0 10"/>
+                                    <TextBlock Text="Available Space" Margin="0 0 0 10"/>
+                                </StackPanel>
+
+                                <StackPanel Margin="20 0 0 0">
+                                    <TextBlock Text="{Binding OsName}" Margin="0 0 0 10"/>
+                                    <TextBlock Text="{Binding OsVersion}" Margin="0 0 0 10"/>
+                                    <TextBlock Text="{Binding OsBuild}" Margin="0 0 0 10"/>
+                                    <TextBlock Text="{Binding OsArch}" Margin="0 0 0 10"/>
+                                    <TextBlock Text="{Binding Username}" Margin="0 0 0 10"/>
+                                    <TextBlock Text="{Binding ComputerName}" Margin="0 0 0 10"/>
+                                    <TextBlock Text="{Binding CpuName}" Margin="0 0 0 10"/>
+                                    <TextBlock Text="{Binding CpuSpeed}" Margin="0 0 0 10"/>
+                                    <TextBlock Text="{Binding CpuCores}" Margin="0 0 0 10"/>
+                                    <TextBlock Text="{Binding PcModel}" Margin="0 0 0 10"/>
+                                    <TextBlock Text="{Binding Brand}" Margin="0 0 0 10"/>
+                                    <TextBlock Text="{Binding BiosVersion}" Margin="0 0 0 10"/>
+                                    <TextBlock Text="{Binding SelDisk}" Margin="0 0 0 10"/>
+                                    <TextBlock Text="{Binding DiskType}" Margin="0 0 0 10"/>
+                                    <TextBlock Text="{Binding DiskFormat}" Margin="0 0 0 10"/>
+                                    <TextBlock Text="{Binding DiskSize}" Margin="0 0 0 10"/>
+                                    <TextBlock Text="{Binding DiskFree}" Margin="0 0 0 10"/>
+                                </StackPanel>
+
+                            </StackPanel>
+                        </ScrollViewer>
+
+                    </Grid>
+
+                </Border>
+            </Grid>
+            <Image HorizontalAlignment="Right" Width="200" Height="200" Margin="0 0 25 0"
+                   Stretch="Uniform"
+                   Source="{StaticResource SystemInfo}"/>
+        </Grid>
+    </Grid>
+</Page>

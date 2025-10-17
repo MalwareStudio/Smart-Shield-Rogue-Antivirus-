@@ -1,0 +1,73 @@
+﻿<Window x:Class="RogueAntivirusPatched.Windows.Popup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RogueAntivirusPatched.Windows"
+        xmlns:viewModel="clr-namespace:RogueAntivirusPatched.ViewModel"
+        xmlns:userControl="clr-namespace:RogueAntivirusPatched.View.CustomUserControl"
+        mc:Ignorable="d"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStyle="None"
+        Topmost="True"
+        Title="Popup" Height="200" Width="350" ResizeMode="NoResize" ShowInTaskbar="False" 
+        
+        SourceInitialized="Window_SourceInitialized" Closing="Window_Closing" Closed="Window_Closed"
+        d:DataContext="{d:DesignInstance viewModel:vmPopup, IsDesignTimeCreatable=True}">
+
+    <Window.Resources>
+        <Style TargetType="TextBlock" BasedOn="{StaticResource PageFont}"/>
+    </Window.Resources>
+    <Grid RenderTransformOrigin="0.5,0.0">
+        <!-- Used for animating appear thing -->
+        <Grid.RenderTransform>
+            <TranslateTransform x:Name="WindowTranslate" />
+        </Grid.RenderTransform>
+
+        <Border Background="{StaticResource PageBackground}" CornerRadius="5">
+            <Grid>
+                <Border Background="{StaticResource RedFade}" CornerRadius="5 5 0 0">
+                    <TextBlock FontWeight="Black" FontSize="25" Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}" 
+                               VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Border>
+
+                <Grid Grid.Row="1">
+
+                    <Image Source="{Binding Picture, UpdateSourceTrigger=PropertyChanged}" Height="90" Width="90" Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0"/>
+
+                    <StackPanel Grid.Column="1" Margin="10">
+                        <TextBlock Foreground="{StaticResource DarkOrangeFade}" FontWeight="Black" FontSize="16" Text="{Binding SubTitle, UpdateSourceTrigger=PropertyChanged}" TextWrapping="WrapWithOverflow" Margin="0 5 0 5"/>
+                        <Border Height="1" Style="{StaticResource BlueBorder}" Margin="0 0 0 5"/>
+                        <TextBlock FontSize="12" Text="{Binding Text, UpdateSourceTrigger=PropertyChanged}" 
+                                   TextTrimming="CharacterEllipsis"
+                                   TextWrapping="Wrap"
+                                   Height="70"/>
+                    </StackPanel>
+
+                    <userControl:CommonButton
+                            x:Name="firstButton"
+                            Grid.Column="1"
+                            SetContent="{Binding ContentButton}"
+                            SetWidth="120"
+                            SetFontSize="14"
+                            SetHeight="30"
+                            VerticalAlignment="Bottom" HorizontalAlignment="Left"
+                            Margin="10 0 0 10"
+                            PreviewMouseLeftButtonDown="BtnRemove_Click"/>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+            </Grid>
+        </Border>
+
+    </Grid>
+</Window>

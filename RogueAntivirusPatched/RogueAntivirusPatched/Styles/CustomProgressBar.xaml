@@ -1,0 +1,21 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:models="clr-namespace:RogueAntivirusPatched.Model">
+    <Style x:Key="CustomProgressBar" TargetType="ProgressBar">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ProgressBar">
+                    <ControlTemplate.Resources>
+                        <models:mProgressConvertor x:Key="sttc"/>
+                    </ControlTemplate.Resources>
+                    <Border BorderBrush="{StaticResource LightBlueFade}" BorderThickness="2" Background="Transparent" CornerRadius="5">
+                        <Grid x:Name="PART_Track">
+                            <Border x:Name="PART_Indicator" HorizontalAlignment="Left" 
+                                Background="{StaticResource LightBlueFade}"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

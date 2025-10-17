@@ -1,0 +1,318 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <BitmapImage x:Key="Warning" UriSource="pack://application:,,,/Resources/warning.png"/>
+
+    <Style x:Key="SwingAnimation" TargetType="Image">
+        <Setter Property="RenderTransform">
+            <Setter.Value>
+                <RotateTransform CenterX="50" CenterY="50"/>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+
+                            <DoubleAnimationUsingKeyFrames RepeatBehavior="0:0:3.6" Storyboard.TargetProperty="(Image.RenderTransform).(RotateTransform.Angle)">
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-15">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <QuadraticEase EasingMode="EaseOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="15">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <QuadraticEase EasingMode="EaseOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <QuadraticEase EasingMode="EaseOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+
+                            </DoubleAnimationUsingKeyFrames>
+
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <BitmapImage x:Key="Fortress" UriSource="pack://application:,,,/Resources/fortress.png"/>
+    <BitmapImage x:Key="SystemInfo" UriSource="pack://application:,,,/Resources/systemInfo.png"/>
+    <BitmapImage x:Key="Sweeper" UriSource="pack://application:,,,/Resources/sweep.png"/>
+    <BitmapImage x:Key="Registry" UriSource="pack://application:,,,/Resources/registry.png"/>
+    <BitmapImage x:Key="Keys" UriSource="pack://application:,,,/Resources/keys.png"/>
+    <BitmapImage x:Key="Rover" UriSource="pack://application:,,,/Resources/rover.png"/>
+    <BitmapImage x:Key="OnlineChat" UriSource="pack://application:,,,/Resources/online-chat.png"/>
+    
+    <LinearGradientBrush x:Key="DarkPurpleFade" StartPoint="0,0" EndPoint="1,0">
+        <GradientStop Offset="0" Color="#150030"/>
+        <GradientStop Offset="1" Color="#0F0022"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="BlueFade" StartPoint="0,0" EndPoint="1,0">
+        <GradientStop Offset="0" Color="#002B80"/>
+        <GradientStop Offset="1" Color="#001D57"/>
+    </LinearGradientBrush>
+
+    <RadialGradientBrush x:Key="BorderStatusOrangeFade" 
+                         GradientOrigin="0.0,0.5" Center="0.0,0.5" 
+                         RadiusX="0.5" RadiusY="1.0">
+        <GradientStop Offset="0" Color="#FF9100"/>
+        <GradientStop Offset="1.0" Color="#FFB95B"/>
+    </RadialGradientBrush>
+
+    <LinearGradientBrush x:Key="LightBlueFade" StartPoint="0,0" EndPoint="1,0">
+        <GradientStop Offset="0" Color="#0055FF"/>
+        <GradientStop Offset="1" Color="#003FBC"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="WhiteFade" StartPoint="0,0" EndPoint="1,0">
+        <GradientStop Offset="0" Color="#BABABA"/>
+        <GradientStop Offset="1" Color="#797979"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="BrightWhiteFade" StartPoint="0,0" EndPoint="1,0">
+        <GradientStop Offset="0" Color="#E8E8E8"/>
+        <GradientStop Offset="1" Color="#BABABA"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="PageBackground" StartPoint="0,0" EndPoint="1,0">
+        <GradientStop Offset="0" Color="#040028"/>
+        <GradientStop Offset="1" Color="#020018"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="SaturatedBlueFade" StartPoint="0,0" EndPoint="1,0">
+        <GradientStop Offset="0" Color="#005EFF"/>
+        <GradientStop Offset="1" Color="#0091FF"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="DarkOrangeFade" StartPoint="0,0" EndPoint="1,0">
+        <GradientStop Offset="0" Color="#FF4400"/>
+        <GradientStop Offset="1" Color="#FF2B00"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="RedFade" StartPoint="0,0" EndPoint="1,0">
+        <GradientStop Offset="0" Color="#FF0000"/>
+        <GradientStop Offset="1" Color="#FF3300"/>
+    </LinearGradientBrush>
+
+    <Style x:Key="PageFont" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontFamily" Value="Comic Sans Ms"/>
+        <Setter Property="Foreground">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Offset="0" Color="White"/>
+                    <GradientStop Offset="1" Color="#BABABA"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="BlueBorder" TargetType="Border">
+        <Setter Property="Background" Value="{StaticResource LightBlueFade}"/>
+    </Style>
+
+    <Style x:Key="PageFontRed" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontFamily" Value="Comic Sans Ms"/>
+        <Setter Property="Foreground">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Offset="0" Color="Red"/>
+                    <GradientStop Offset="1" Color="#FF6969"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="BorderFade" TargetType="Border">
+        <Setter Property="Opacity" Value="0.3"/>
+
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimationUsingKeyFrames RepeatBehavior="Forever" Storyboard.TargetProperty="Opacity">
+                                <EasingDoubleKeyFrame KeyTime="0:0:5" Value="1.0">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <QuadraticEase EasingMode="EaseInOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                                <EasingDoubleKeyFrame KeyTime="0:0:10" Value="0.3">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <QuadraticEase EasingMode="EaseInOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
+    <Style x:Key="MotionUp" TargetType="Image">
+        <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
+        <Setter Property="RenderTransform">
+            <Setter.Value>
+                <TranslateTransform Y="3"/>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimationUsingKeyFrames RepeatBehavior="Forever" Storyboard.TargetProperty="(Image.RenderTransform).(TranslateTransform.Y)">
+                                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-3">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <QuadraticEase EasingMode="EaseInOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="3">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <QuadraticEase EasingMode="EaseInOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="SmoothFadeForever" TargetType="Image">
+        <Setter Property="Opacity" Value="0.0"/>
+
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimationUsingKeyFrames RepeatBehavior="Forever" Storyboard.TargetProperty="Opacity">
+                                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="1.0">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <QuadraticEase EasingMode="EaseInOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                                <EasingDoubleKeyFrame KeyTime="0:0:6" Value="0.0">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <QuadraticEase EasingMode="EaseInOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+            </Trigger>
+        </Style.Triggers>
+    </Style> 
+    
+    <Style x:Key="Fade" TargetType="Image">
+        <Setter Property="Opacity" Value="1.0"/>
+
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                             From="0"
+                                             To="1.0"
+                                             Duration="0:0:2">
+                            </DoubleAnimation>
+
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="RegisterButton" TargetType="Button">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Foreground" Value="LightGray"/>
+        <Setter Property="FontSize" Value="26"/>
+        <Setter Property="FontFamily" Value="Comic Sans Ms"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Border Background="{StaticResource DarkPurpleFade}" CornerRadius="5"
+                            BorderThickness="2" BorderBrush="{StaticResource BlueFade}"/>
+                        <ContentPresenter VerticalAlignment="Center"
+                                      HorizontalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="RenderTransformOrigin" Value="0.5,0.5"/>
+        <Setter Property="RenderTransform">
+            <Setter.Value>
+                <ScaleTransform ScaleX="1.0" ScaleY="1.0"/>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" Value="White"/>
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Button.RenderTransform).(ScaleTransform.ScaleX)">
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1.09">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <QuadraticEase EasingMode="EaseOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Button.RenderTransform).(ScaleTransform.ScaleY)">
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1.09">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <QuadraticEase EasingMode="EaseOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Button.RenderTransform).(ScaleTransform.ScaleX)">
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1.0">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <QuadraticEase EasingMode="EaseOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                            </DoubleAnimationUsingKeyFrames>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Button.RenderTransform).(ScaleTransform.ScaleY)">
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1.0">
+                                    <EasingDoubleKeyFrame.EasingFunction>
+                                        <QuadraticEase EasingMode="EaseOut"/>
+                                    </EasingDoubleKeyFrame.EasingFunction>
+                                </EasingDoubleKeyFrame>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+            </Trigger>
+        </Style.Triggers>
+
+    </Style>
+</ResourceDictionary>

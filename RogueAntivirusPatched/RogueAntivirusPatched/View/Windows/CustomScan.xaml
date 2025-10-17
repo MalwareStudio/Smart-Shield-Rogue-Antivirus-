@@ -1,0 +1,27 @@
+﻿<Window x:Class="RogueAntivirusPatched.View.Windows.CustomScan"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RogueAntivirusPatched.View.Windows"
+        xmlns:userControl="clr-namespace:RogueAntivirusPatched.View.CustomUserControl"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Topmost="True"
+        Title="Custom Scan" Height="150" Width="500">
+    <Window.Resources>
+        <Style TargetType="TextBlock" BasedOn="{StaticResource PageFont}"/>
+    </Window.Resources>
+    
+    <Grid>
+        <Border Background="{StaticResource PageBackground}"/>
+        <StackPanel Margin="10 10 10 45">
+            <TextBlock Text="Do you want to scan the folder with all files and subdirectories or only specific files?" TextWrapping="WrapWithOverflow"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 0 0 10">
+            <userControl:CommonButton SetContent="Folder" Margin="0 0 10 0" PreviewMouseLeftButtonDown="BtnFolder_Click"/>
+            <userControl:CommonButton SetContent="Specific Files" PreviewMouseLeftButtonDown="BtnFiles_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
