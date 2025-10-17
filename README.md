@@ -1,2 +1,13 @@
 # Smart-Shield
-This project was created for educational and entertaiment purposes only.
+
+## What is Smart Shield 🤔?
+
+
+## Guide for noobs 📄
+
+
+## How it works ⚙️?
+
+
+## Credits
+
