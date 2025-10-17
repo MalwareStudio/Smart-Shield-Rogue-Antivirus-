@@ -1,0 +1,26 @@
+﻿<Window x:Class="Rogue_Installer.WpfWindow.Loader"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rogue_Installer.WpfWindow"
+        xmlns:viewmodel="clr-namespace:Rogue_Installer.MVVM.ViewModel"
+        mc:Ignorable="d"
+        Title="Loader" Height="300" Width="500"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        d:DataContext="{d:DesignInstance viewmodel:vmLoader, IsDesignTimeCreatable=True}"
+        Loaded="Window_Loaded">
+    <Grid x:Name="MainGrid">
+        <Border Background="#F222" CornerRadius="10" BorderBrush="White" BorderThickness="5"/>
+
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Style="{StaticResource TitleFont}" FontSize="60" Text="Loading" Margin="0 0 0 20"/>
+            <TextBlock Style="{StaticResource CommonFont}" Text="{Binding ProgressDescription}" Margin="0 0 0 10"/>
+            <ProgressBar Style="{StaticResource loaderBar}" Tag="{Binding BarContent}" Value="{Binding BarValue}" Maximum="100" Height="30" Width="400"/>
+        </StackPanel>
+    </Grid>
+</Window>

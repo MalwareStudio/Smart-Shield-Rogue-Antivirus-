@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="Rogue_Installer.MVVM.View.UserControls.MenuControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Rogue_Installer.MVVM.View.UserControls"
+             xmlns:viewmodel="clr-namespace:Rogue_Installer.MVVM.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="800"
+             d:DataContext="{d:DesignInstance viewmodel:vmMainWindow, IsDesignTimeCreatable=True}">
+    <Grid>
+        <Menu x:Name="MenuControlName" Grid.Row="1" Height="auto" VerticalAlignment="Top" Background="DimGray" Loaded="MenuControlName_Loaded">
+            <MenuItem Click="MainMenu_Click" Header="{Binding MainMenuContent}" FontSize="20"/>
+            <MenuItem Click="About_Click" Header="{Binding AboutContent}" FontSize="20"/>
+            <MenuItem Click="Credits_Click" Header="{Binding CreditsContent}" FontSize="20"/>
+            <MenuItem Click="Follow_Click" Header="{Binding FollowContent}" FontSize="20"/>
+        </Menu>
+    </Grid>
+</UserControl>
