@@ -1,0 +1,36 @@
+﻿<Page x:Class="Rogue_Installer.MVVM.View.Pages.InstallerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Rogue_Installer.MVVM.View.Pages"
+      xmlns:viewmodel="clr-namespace:Rogue_Installer.MVVM.ViewModel"
+      mc:Ignorable="d" 
+      d:Width="600" d:Height="400"
+      Title="InstallerPage"
+      d:DataContext="{d:DesignInstance viewmodel:vmInstallerPage, IsDesignTimeCreatable=True}"
+      Loaded="Page_Loaded">
+
+    <Page.Resources>
+        <LinearGradientBrush x:Key="SetupBackground" StartPoint="0,0" EndPoint="1,0">
+            <GradientStop Color="Blue" Offset="0.0" />
+            <GradientStop Color="DarkBlue" Offset="1" />
+        </LinearGradientBrush>
+    </Page.Resources>
+    <Grid>
+        <Border Style="{StaticResource ContentBorder}" Background="{StaticResource SetupBackground}">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Image x:Name="MainImage" Style="{StaticResource WheelAnimation}" Source="{StaticResource GearWheel}" Width="100" Height="100" Margin="0 0 0 10"/>
+                <TextBlock Style="{StaticResource TitleFont}" FontSize="30" Text="{Binding Instructions}" Margin="0 0 0 10"/>
+                <TextBlock Style="{StaticResource CommonFont}" Text="{Binding AboutProgress}" Margin="0 0 0 10"/>
+                <ProgressBar Style="{StaticResource setupBar}" Value="{Binding BarValue}" Tag="{Binding BarContent}" Height="40" Width="400"/>
+
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 10 0 0">
+                    <Image Source="{StaticResource TipBulb}" Width="30" Height="30"/>
+                    <TextBlock Style="{StaticResource CommonFont}" FontSize="12" Text="{Binding SomeTips}"/>
+                </StackPanel>
+                
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>
