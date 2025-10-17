@@ -1,0 +1,25 @@
+﻿<Application x:Class="RogueAntivirusPatched.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:RogueAntivirusPatched"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/DefaultFont.xaml"/>
+                <ResourceDictionary Source="Styles/CommonFont.xaml"/>
+                <ResourceDictionary Source="Styles/RadialButtonDefault.xaml"/>
+                <ResourceDictionary Source="Styles/ButtonDefault.xaml"/>
+                <ResourceDictionary Source="Styles/CheckBoxStyle.xaml"/>
+                <ResourceDictionary Source="Styles/DefaultProgressBar.xaml"/>
+                <ResourceDictionary Source="Styles/GrayBorder.xaml"/>
+                <ResourceDictionary Source="Styles/TextStyle.xaml"/>
+                <ResourceDictionary Source="Styles/GlobalResources.xaml"/>
+                <ResourceDictionary Source="Styles/CustomProgressBar.xaml"/>
+                <ResourceDictionary Source="Styles/CustomScrollViewer.xaml"/>
+                <ResourceDictionary Source="Styles/DataGridStyle.xaml"/>
+                <ResourceDictionary Source="Styles/CustomCheckBox.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,126 @@
+﻿<Window x:Class="RogueAntivirusPatched.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RogueAntivirusPatched"
+        xmlns:vmMain="clr-namespace:RogueAntivirusPatched.ViewModel"
+        xmlns:userControl="clr-namespace:RogueAntivirusPatched.View.CustomUserControl"
+        mc:Ignorable="d"
+        Topmost="True"
+        Title="{Binding WindowTitle}" Height="750" Width="1000"
+        ResizeMode="CanMinimize"
+        Loaded="Window_Loaded"
+        d:DataContext="{d:DesignInstance vmMain:vmMainWindow, IsDesignTimeCreatable=True}"
+        Closing="Window_Closing"
+        Activated="Window_Activated">
+    <Window.Resources>
+        <Style TargetType="userControl:MenuItem">
+            <Setter Property="FontColor" Value="{StaticResource BlueFade}"/>
+            <Setter Property="SubFontColor" Value="{StaticResource WhiteFade}"/>
+            <Setter Property="Margin" Value="0 0 0 10"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <RotateTransform CenterX="50" CenterY="50"/>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="FontColor" Value="{StaticResource LightBlueFade}"/>
+                    <Setter Property="SubFontColor" Value="{StaticResource BrightWhiteFade}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid>
+            <Border Background="{StaticResource BlueFade}"/>
+            <StackPanel Orientation="Horizontal">
+                <Image Style="{StaticResource MotionUp}" Source="{Binding AppLogo}" Height="80" Width="80"
+            HorizontalAlignment="Left" Margin="10 0 0 0"/>
+                <StackPanel Margin="10 0 0 0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Style="{StaticResource DefaultFont}" FontSize="30" Text="{Binding AppName}"/>
+                    <TextBlock Style="{StaticResource DefaultFont}" FontSize="16" Text="Always protects your shit!"/>
+                </StackPanel>
+            </StackPanel>
+
+            <Button Style="{StaticResource RegisterButton}" Content="Register" Width="180" Height="50" HorizontalAlignment="Right"
+                    Visibility="{Binding IsVisibleRegisterBtn}"
+                    Click="Register_Click"
+                    Margin="0 0 10 0"/>
+
+            <Grid Grid.Row="1">
+                <Border Background="{StaticResource DarkPurpleFade}"/>
+                <StackPanel Margin="10" PreviewMouseDown="StackPanel_PreviewMouseDown">
+                    <userControl:MenuItem MenuItemText="Antivirus Center"
+                                              SubMenuItemText="Scan and remove threats"
+                                              MouseDown="AntivirusPageClickEvent"
+                                              MenuItemImage="{StaticResource Fortress}"/>
+                    <userControl:MenuItem MenuItemText="Junk Cleaner"
+                                              SubMenuItemText="Remove Temporary Files"
+                                              MouseDown="JunkPageClickEvent"
+                                              MenuItemImage="{StaticResource Sweeper}"/>
+                    <userControl:MenuItem MenuItemText="Registry Optimizer"
+                                              SubMenuItemText="Clean up registry files"
+                                              MouseDown="RegistryPageClickEvent"
+                                              MenuItemImage="{StaticResource Registry}"/>
+                    <userControl:MenuItem MenuItemText="System Information"
+                                              SubMenuItemText="Get information about your computer"
+                                              MouseDown="SystemInfoPageClickEvent"
+                                              MenuItemImage="{StaticResource SystemInfo}"/>
+                </StackPanel>
+
+                <StackPanel Margin="10" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                    <Border Background="{StaticResource BlueFade}" CornerRadius="3" 
+                            Width="200" Height="5" Margin="0 0 0 20"/>
+
+                    <userControl:MenuItem MenuItemText="Support"
+                                              SubMenuItemText="Some other problems?&#x0a;Do not hesitate to contact us!"
+                                              MouseDown="SupportClickEvent"
+                                              MenuItemImage="{StaticResource OnlineChat}"/>
+                    <TextBlock Style="{StaticResource CommonFont}" Foreground="{StaticResource WhiteFade}" 
+                               Text="Created by CYBER SOLDIER (Clutter)"
+                               TextWrapping="Wrap"
+                               FontSize="12"/>
+                </StackPanel>
+
+                <Grid Grid.Column="1">
+                    <Grid>
+                        <Frame NavigationUIVisibility="Hidden"
+                               Content="{Binding ContentPage, UpdateSourceTrigger=PropertyChanged}"/>
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <Border Background="{StaticResource BlueFade}"/>
+                        <Border Style="{StaticResource BorderFade}" Background="{Binding ColorBorderStatus}"/>
+                        <StackPanel Orientation="Horizontal" Margin="10">
+                            <Image Style="{StaticResource SmoothFadeForever}" Source="{Binding LicenseStatusImage, UpdateSourceTrigger=PropertyChanged}" Width="85" Stretch="Fill" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+
+                            <StackPanel Margin="10 0 0 0">
+                                <TextBlock Style="{StaticResource CommonFont}" FontSize="30" FontWeight="Black" Text="{Binding LicenseStatusTitle, UpdateSourceTrigger=PropertyChanged}"/>
+                                <TextBlock Style="{StaticResource CommonFont}" FontSize="20" FontWeight="Black" Text="{Binding LicenseStatusText, UpdateSourceTrigger=PropertyChanged}"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
+                </Grid>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="230"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>    
+            </Grid>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+        </Grid>
+    </Grid>
+</Window>

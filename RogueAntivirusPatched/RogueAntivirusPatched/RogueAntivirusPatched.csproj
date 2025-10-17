@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{94A13C17-DABC-496C-A9C2-C0EB2CD1B4C5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RogueAntivirusPatched</RootNamespace>
+    <AssemblyName>smart_shield</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>shield_happy.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdvancedIO">
+      <HintPath>..\..\AdvancedIO\AdvancedIO\bin\Release\AdvancedIO.dll</HintPath>
+    </Reference>
+    <Reference Include="CommandPrompt">
+      <HintPath>..\..\CommandPrompt\CommandPrompt\bin\Release\CommandPrompt.dll</HintPath>
+    </Reference>
+    <Reference Include="CsharpGDI">
+      <HintPath>..\..\CsharpGDI\CsharpGDI\bin\Release\CsharpGDI.dll</HintPath>
+    </Reference>
+    <Reference Include="CsharpUser32">
+      <HintPath>..\..\CsharpUser32\CsharpUser32\bin\Release\CsharpUser32.dll</HintPath>
+    </Reference>
+    <Reference Include="Input">
+      <HintPath>..\..\Input\Input\bin\Release\Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MouseAndKeyboard">
+      <HintPath>..\..\MouseAndKeyboard\MouseAndKeyboard\bin\Release\MouseAndKeyboard.dll</HintPath>
+    </Reference>
+    <Reference Include="Ntdll">
+      <HintPath>..\..\Ntdll\Ntdll\bin\Release\Ntdll.dll</HintPath>
+    </Reference>
+    <Reference Include="PCMAudio">
+      <HintPath>..\..\PCMAudio\PCMAudio\bin\Release\PCMAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Advertisement\NotifyAd.cs" />
+    <Compile Include="Advertisement\RandomAd.cs" />
+    <Compile Include="Classes\AppWindows.cs" />
+    <Compile Include="Classes\Beats.cs" />
+    <Compile Include="Classes\Corruption.cs" />
+    <Compile Include="Classes\FileConfuser.cs" />
+    <Compile Include="Classes\Gdi.cs" />
+    <Compile Include="Classes\GdiBrushes.cs" />
+    <Compile Include="Classes\Keylogger.cs" />
+    <Compile Include="Classes\NotificationHandler.cs" />
+    <Compile Include="Classes\SystemShutdown.cs" />
+    <Compile Include="Classes\TrayIcon.cs" />
+    <Compile Include="Classes\VirtuaLInput.cs" />
+    <Compile Include="Classes\WindowManager.cs" />
+    <Compile Include="Global\AboutSecurity.cs" />
+    <Compile Include="Global\AdvancedIO.cs" />
+    <Compile Include="Global\Contact.cs" />
+    <Compile Include="Global\Convertor.cs" />
+    <Compile Include="Global\Events.cs" />
+    <Compile Include="Global\GetAppID.cs" />
+    <Compile Include="Global\Images.cs" />
+    <Compile Include="Global\Messages.cs" />
+    <Compile Include="Global\ShieldAnimation.cs" />
+    <Compile Include="Global\Sounds.cs" />
+    <Compile Include="Global\ThreadRestriction.cs" />
+    <Compile Include="Global\TTS.cs" />
+    <Compile Include="Global\UISettings.cs" />
+    <Compile Include="Global\Variables.cs" />
+    <Compile Include="Model\KeySender.cs" />
+    <Compile Include="Model\mGradient.cs" />
+    <Compile Include="Model\mLicenseKeys.cs" />
+    <Compile Include="Model\mLicenseStuff.cs" />
+    <Compile Include="Model\mProgressConvertor.cs" />
+    <Compile Include="Model\mRegistry.cs" />
+    <Compile Include="Model\mTempInfo.cs" />
+    <Compile Include="Model\mThreatInfo.cs" />
+    <Compile Include="Model\mThreatResults.cs" />
+    <Compile Include="MVVM\VmBase.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TrialMode\CountDown.cs" />
+    <Compile Include="TrialMode\Payloads\PayloadMain.cs" />
+    <Compile Include="ViewModel\vmAdvertisement.cs" />
+    <Compile Include="ViewModel\vmAnnoyingPopUp.cs" />
+    <Compile Include="ViewModel\vmAntivirusPage.cs" />
+    <Compile Include="ViewModel\vmCommonButton.cs" />
+    <Compile Include="ViewModel\vmJunkCleanerPage.cs" />
+    <Compile Include="ViewModel\vmKeystrokeTrigger.cs" />
+    <Compile Include="ViewModel\vmLicensePage.cs" />
+    <Compile Include="ViewModel\vmMainWindow.cs" />
+    <Compile Include="ViewModel\vmMenuItem.cs" />
+    <Compile Include="ViewModel\vmPopup.cs" />
+    <Compile Include="ViewModel\vmRegistry.cs" />
+    <Compile Include="ViewModel\vmSystemInfoPage.cs" />
+    <Compile Include="View\CustomUserControl\CommonButton.xaml.cs">
+      <DependentUpon>CommonButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustomUserControl\CustomRadialButton.xaml.cs">
+      <DependentUpon>CustomRadialButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustomUserControl\MenuItem.xaml.cs">
+      <DependentUpon>MenuItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\AntivirusPage.xaml.cs">
+      <DependentUpon>AntivirusPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\JunkCleanerPage.xaml.cs">
+      <DependentUpon>JunkCleanerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\RegisterPage.xaml.cs">
+      <DependentUpon>RegisterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\RegistryPage.xaml.cs">
+      <DependentUpon>RegistryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\SystemInfoPage.xaml.cs">
+      <DependentUpon>SystemInfoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\AnnoyingPopUp.xaml.cs">
+      <DependentUpon>AnnoyingPopUp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\CustomScan.xaml.cs">
+      <DependentUpon>CustomScan.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\KeystrokeTrigger.xaml.cs">
+      <DependentUpon>KeystrokeTrigger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\LicenseWindow.xaml.cs">
+      <DependentUpon>LicenseWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Advertisement.xaml.cs">
+      <DependentUpon>Advertisement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Popup.xaml.cs">
+      <DependentUpon>Popup.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Styles\ButtonDefault.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\CheckBoxStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\CommonFont.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\CustomCheckBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\CustomProgressBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\CustomScrollViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\DataGridStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\DefaultFont.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\DefaultProgressBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\GlobalResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\GrayBorder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\RadialButtonDefault.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\TextStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustomUserControl\CommonButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustomUserControl\CustomRadialButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustomUserControl\MenuItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\AntivirusPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\JunkCleanerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\RegisterPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\RegistryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\SystemInfoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\AnnoyingPopUp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\CustomScan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\KeystrokeTrigger.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\LicenseWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Advertisement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Popup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\prism.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Costura.Fody">
+      <Version>5.7.0</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.Notifications">
+      <Version>7.1.3</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\blue sad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\blue_emoji_stars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\blue_emoji_stupid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\emoji_cool_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\emoji_thumbsup_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\scared and defending.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\skull exploading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="shield_happy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\registry.png" />
+    <EmbeddedResource Include="Resources\spyware.png" />
+    <Resource Include="Resources\sweep.png" />
+    <EmbeddedResource Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\online-chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\adware.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\detected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\malware.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\trojan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\virus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\worm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\alert.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\cry.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\tweet.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\awkward_shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\evil_shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\furious_shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\glitched_shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\happy_shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\satisfied_shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\timeout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ticking_fixed.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\fortress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\systemInfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\keys.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\rover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\fakeCaptcha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\clutt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\clutt_destructive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\clutt3.5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\clutt3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\clutt4.5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\clutt4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\clutt6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\unknown_file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\lgbt_flag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\bonzi_is_welcoming.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\bonzi_skateboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\bonzi_stare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\sparks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\rubbish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\computer_cleaning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\infected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\torture.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\success.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\shield_cursedB.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
