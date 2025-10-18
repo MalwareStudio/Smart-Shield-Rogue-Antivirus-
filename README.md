@@ -29,7 +29,7 @@ Please do not try to launch **"smart_shield.exe"** alone. The rogue must be inst
 
 You can find the installer here → "Smart-Shield\Rogue_Installer\Rogue_Installer\bin\Release" then search for **"smart_shieldx64_setup.exe"** and there you have it!
 
-Download the **"smart_shieldx64_setup.exe"**, drop it wherever you want to and run it. 
+Download the **"smart_shieldx64_setup.exe"**, drop it wherever you want to, and run it. 
 
 > [!NOTE]
 > You don't need to get other files from this repository.
