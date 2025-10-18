@@ -7,6 +7,8 @@
 
 # Smart-Shield
 
+<img src="https://github.com/MalwareStudio/Smart-Shield/blob/main/Screenshots/UI.png" alt="" width="500"/>
+
 ## What is Smart Shield 🤔?
 Smart Shield, as the name suggests, is a form of antivirus software; nonetheless, it does not come with a legit anti-malware engine, which makes this antivirus fake (in other words, a [rogue antivirus](https://en.wikipedia.org/wiki/Rogue_security_software)). 
 
@@ -36,6 +38,9 @@ Download the **"smart_shieldx64_setup.exe"**, drop it wherever you want to and r
 
 ## How it works ⚙️?
 Once the user allows to install the rogue, it sets the rogue as a startup application. This is done by multiple methods which are registry, startup folder, and lastly task scheduler. To make it even more confusing, the rogue creates multiple copies of itself with random names and those copies are stored inside random directories. Rogues changes file attributes of these files to hidden. The only way to see these files is to enable "Show hidden files, folders, and drives" option and uncheck the option "Hide protected operating system files (Recommended)" inside "File Explorer Options".
+
+![](https://github.com/MalwareStudio/Smart-Shield/blob/main/Screenshots/registry.png)
+![](https://github.com/MalwareStudio/Smart-Shield/blob/main/Screenshots/based_folder.png)
 
 System appications Registry Editor, Task Manager, and Task Scheduler will be blocked and injected via [Image File Execution Option method (IFEO)](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/xperf/image-file-execution-options). Any attempt of running these applications runs the rogue instead.
 
