@@ -7,6 +7,8 @@
 
 # Smart-Shield
 
+![](https://github.com/MalwareStudio/Smart-Shield/blob/main/Screenshots/UI.png)
+
 ## What is Smart Shield 🤔?
 Smart Shield, as the name suggests, is a form of antivirus software; nonetheless, it does not come with a legit anti-malware engine, which makes this antivirus fake (in other words, a [rogue antivirus](https://en.wikipedia.org/wiki/Rogue_security_software)). 
 
