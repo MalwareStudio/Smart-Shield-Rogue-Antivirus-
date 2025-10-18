@@ -39,9 +39,6 @@ Download the **"smart_shieldx64_setup.exe"**, drop it wherever you want to and r
 ## How it works ⚙️?
 Once the user allows to install the rogue, it sets the rogue as a startup application. This is done by multiple methods which are registry, startup folder, and lastly task scheduler. To make it even more confusing, the rogue creates multiple copies of itself with random names and those copies are stored inside random directories. Rogues changes file attributes of these files to hidden. The only way to see these files is to enable "Show hidden files, folders, and drives" option and uncheck the option "Hide protected operating system files (Recommended)" inside "File Explorer Options".
 
-![](https://github.com/MalwareStudio/Smart-Shield/blob/main/Screenshots/registry.png)
-![](https://github.com/MalwareStudio/Smart-Shield/blob/main/Screenshots/based_folder.png)
-
 System appications Registry Editor, Task Manager, and Task Scheduler will be blocked and injected via [Image File Execution Option method (IFEO)](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/xperf/image-file-execution-options). Any attempt of running these applications runs the rogue instead.
 
 It doesn not necessary mean that this rogue is unkillable. The command "[taskkill](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/taskkill)" is still available, however trying to kill the rogue causes [Blue Screen Of Death (BSOD)](https://en.wikipedia.org/wiki/Blue_screen_of_death) thanks to the one function in WinAPI called "[NtSetInformationProcess](http://undocumented.ntinternals.net/index.html?page=UserMode%2FUndocumented%20Functions%2FNT%20Objects%2FProcess%2FNtSetInformationProcess.html)". 
@@ -53,9 +50,16 @@ The rogue also has a license system. The default version is Trial. This particul
 To make this license system possible, rogue stores data about datetime inside its based key in registry **"HKEY_LOCAL_MACHINE\SOFTWARE\Smart Shield"**. Based key of this rogue is also used by other features such as Antivirus Center, Junk Cleaner, and Registry Optimizer.
 Rogue does not only stores data into Registry, but also into its based directory **"C:\Windows\Smart Shield"**. This directory contains resources and text files. Text files are generated and used by previously mentioned features.
 
+![](https://github.com/MalwareStudio/Smart-Shield/blob/main/Screenshots/registry.png)
+![](https://github.com/MalwareStudio/Smart-Shield/blob/main/Screenshots/based_folder.png)
+
 When user updates to the Pro Version, most annoying features which includes "Advertisement" and "Notifications" are disabled. The rogue also enables the "Quit" option inside the Tray Icon. Although it actually terminates the rogue, the critical flag remains untouched resulting to instant BSOD.
 
+![](https://github.com/MalwareStudio/Smart-Shield/blob/main/Screenshots/advertisement.png)
+
 Keylogger was built via extracted WinAPI functions. Unlike standard keystroke detection which provides the C# NetFramework4.5, the lowlevel functions from api allows the rogue to detect all keyboard inputs especially outside the application. This is called a Global Keylogger, and it is used vastly by most of keyloggers. Every keystroke which user presses is stored into char array. If those combined characters matches with hardcoded forbidden keywords (avast, virus, defender, kaspersty etc.), then the rogue blocks all inputs, and after few seconds it terminates itself which results into BSOD.
+
+<img src="https://github.com/MalwareStudio/Smart-Shield/blob/main/Screenshots/BSOD10.jpg" alt="" width="600"/>
 
 ## Credits
 **Founder and main developer - CYBER SOLDIER aka Clutter**
