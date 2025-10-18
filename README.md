@@ -37,7 +37,7 @@ Download the "smart_shieldx64_setup.exe", drop it wherever you want to and run i
 ## How it works ⚙️?
 Once the user allows to install the rogue, it sets the rogue as a startup application. This is done by multiple methods which are registry, startup folder, and lastly task scheduler. To make it even more confusing, the rogue creates multiple copies of itself with random names and those copies are stored inside random directories. Rogues changes file attributes of these files to hidden. The only way to see these files is to enable "Show hidden files, folders, and drives" option and uncheck the option "Hide protected operating system files (Recommended)" inside "File Explorer Options".
 
-System appications Registry Editor, Task Manager, and Task Scheduler will be blocked and injected via Image File Execution Option method (IFEO). Any attempt of running these applications runs the rogue instead.
+System appications Registry Editor, Task Manager, and Task Scheduler will be blocked and injected via [Image File Execution Option method (IFEO)](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/xperf/image-file-execution-options). Any attempt of running these applications runs the rogue instead.
 
 It doesn not necessary mean that this rogue is unkillable. The command "taskkill" is still available, however trying to kill the rogue causes Blue Screen Of Death (BSOD) thanks to the one function in WinAPI called "". 
 The only way to terminate this rogue is by restarting the computer. It doesn't cause BSOD upon restarting because it fires event called "" in which the rogue sets itself as a non-critical process.
