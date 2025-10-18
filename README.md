@@ -50,12 +50,12 @@ The rogue also has a license system. The default version is Trial. This particul
 To make this license system possible, rogue stores data about datetime inside its based key in registry **"HKEY_LOCAL_MACHINE\SOFTWARE\Smart Shield"**. Based key of this rogue is also used by other features such as Antivirus Center, Junk Cleaner, and Registry Optimizer.
 Rogue does not only stores data into Registry, but also into its based directory **"C:\Windows\Smart Shield"**. This directory contains resources and text files. Text files are generated and used by previously mentioned features.
 
-![](https://github.com/MalwareStudio/Smart-Shield/blob/main/Screenshots/registry.png)
-![](https://github.com/MalwareStudio/Smart-Shield/blob/main/Screenshots/based_folder.png)
+<img src="https://github.com/MalwareStudio/Smart-Shield/blob/main/Screenshots/registry.png" alt="" width="600"/>
+<img src="https://github.com/MalwareStudio/Smart-Shield/blob/main/Screenshots/based_folder.png" alt="" width="600"/>
 
 When user updates to the Pro Version, most annoying features which includes "Advertisement" and "Notifications" are disabled. The rogue also enables the "Quit" option inside the Tray Icon. Although it actually terminates the rogue, the critical flag remains untouched resulting to instant BSOD.
 
-![](https://github.com/MalwareStudio/Smart-Shield/blob/main/Screenshots/advertisement.png)
+<img src="https://github.com/MalwareStudio/Smart-Shield/blob/main/Screenshots/advertisement.png" alt="" width="600"/>
 
 Keylogger was built via extracted WinAPI functions. Unlike standard keystroke detection which provides the C# NetFramework4.5, the lowlevel functions from api allows the rogue to detect all keyboard inputs especially outside the application. This is called a Global Keylogger, and it is used vastly by most of keyloggers. Every keystroke which user presses is stored into char array. If those combined characters matches with hardcoded forbidden keywords (avast, virus, defender, kaspersty etc.), then the rogue blocks all inputs, and after few seconds it terminates itself which results into BSOD.
 
