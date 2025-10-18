@@ -42,7 +42,7 @@ Once the user allows the rogue to install, it sets the rogue as a startup applic
 System applications Registry Editor, Task Manager, and Task Scheduler will be blocked and injected via [the Image File Execution Option method (IFEO)](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/xperf/image-file-execution-options). Any attempt to run these applications runs the rogue instead.
 
 It does not necessarily mean that this rogue is unkillable. The command "[taskkill](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/taskkill)" is still available; however, trying to kill the rogue causes [Blue Screen Of Death (BSOD)](https://en.wikipedia.org/wiki/Blue_screen_of_death) thanks to the one function in WinAPI called "[NtSetInformationProcess](http://undocumented.ntinternals.net/index.html?page=UserMode%2FUndocumented%20Functions%2FNT%20Objects%2FProcess%2FNtSetInformationProcess.html)". 
-The only way to terminate this rogue is by restarting the computer. It doesn't cause BSOD upon restarting because it fires an event called "[SystemEvents_SessionEnding](https://learn.microsoft.com/en-us/dotnet/api/microsoft.win32.systemevents.sessionending?view=windowsdesktop-9.0)" in which the rogue sets itself as a non-critical process.
+The only way to terminate this rogue without triggering BSOD is by restarting the computer. It doesn't cause BSOD upon restarting because it fires an event called "[SystemEvents_SessionEnding](https://learn.microsoft.com/en-us/dotnet/api/microsoft.win32.systemevents.sessionending?view=windowsdesktop-9.0)" in which the rogue sets itself as a non-critical process.
 
 <img src="https://github.com/MalwareStudio/Smart-Shield/blob/main/Screenshots/BSOD10.jpg" alt="" width="600"/>
 
