@@ -8,26 +8,26 @@
 # Smart-Shield
 
 ## What is Smart Shield 🤔?
-Smart Shield, as the name suggests, is a form of antivirus software; nonetheless, it does not come with a legit anti-malware engine, which makes this antivirus fake (in other words, a rogue antivirus). 
+Smart Shield, as the name suggests, is a form of antivirus software; nonetheless, it does not come with a legit anti-malware engine, which makes this antivirus fake (in other words, a [rogue antivirus](https://en.wikipedia.org/wiki/Rogue_security_software)). 
 
-Executing this rogue antivirus will force the user to use it without any option to quit or uninstall.
+Executing this rogue antivirus forces the user to use it without any option to quit or uninstall.
 
-The core idea is based on the infamous Navashield and Anvi antivirus. Some animations, functionality, and UI were inspired by those two antiviruses.
+The core idea is based on the infamous [Navashield](https://crappysoftware.miraheze.org/wiki/NavaShield) and [Anvi](https://www.enigmasoftware.com/anvi-removal/) antivirus. Some animations, functionality, and UI were inspired by those two antiviruses.
 
-It's worth mentioning that this rogue was created mainly for my content on YouTube and also for a challenge. The challenge for me was to develop a malicious application on the WPF framework (which I didn't understand well) and make it destructive, difficult to remove, annoying, and most importantly, interesting.
+It's worth mentioning that this rogue was created mainly for my content on YouTube and also for a challenge. The challenge for me was to develop a malicious application on the WPF framework (which I didn't understand well) and make it destructive, difficult to remove, annoying, and most importantly, interesting. So I came up with developing my own rogue antivirus.
 
-This rogue should be executed inside a safe environment, such as a virtual computer. There are many brands that you can choose from; the well-known and easy-to-use ones are Oracle VirtualBox(free) and VMware (paid).
+This rogue should be executed inside a safe environment, such as a [virtual computer](https://en.wikipedia.org/wiki/Virtual_machine). There are many brands that you can choose from; the well-known and easy-to-use ones are [Oracle VirtualBox](https://www.virtualbox.org/) (free) and [VMware](https://www.vmware.com/) (paid).
 
 ## Guide for noobs 📄
 Because not all of you are developers, I decided to make a quick guide about how to run it properly.
 
 First of all, you need to get the installer (setup) of this rogue. 
 
-Please do not try to launch "smart_shield.exe" alone. The rogue must be installed along with external resources and settings!
+Please do not try to launch **"smart_shield.exe"** alone. The rogue must be installed along with external resources and settings!
 
-You can find the installer here →  "Smart-Shield\Rogue_Installer\Rogue_Installer\bin\Release" then search for "smart_shieldx64_setup.exe" and there you have it!
+You can find the installer here → "Smart-Shield\Rogue_Installer\Rogue_Installer\bin\Release" then search for **"smart_shieldx64_setup.exe"** and there you have it!
 
-Download the "smart_shieldx64_setup.exe", drop it wherever you want to and run it. 
+Download the **"smart_shieldx64_setup.exe"**, drop it wherever you want to and run it. 
 
 > [!NOTE]
 > You don't need to get other files from this repository.
@@ -39,18 +39,18 @@ Once the user allows to install the rogue, it sets the rogue as a startup applic
 
 System appications Registry Editor, Task Manager, and Task Scheduler will be blocked and injected via [Image File Execution Option method (IFEO)](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/xperf/image-file-execution-options). Any attempt of running these applications runs the rogue instead.
 
-It doesn not necessary mean that this rogue is unkillable. The command "taskkill" is still available, however trying to kill the rogue causes Blue Screen Of Death (BSOD) thanks to the one function in WinAPI called "". 
-The only way to terminate this rogue is by restarting the computer. It doesn't cause BSOD upon restarting because it fires event called "" in which the rogue sets itself as a non-critical process.
+It doesn not necessary mean that this rogue is unkillable. The command "[taskkill](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/taskkill)" is still available, however trying to kill the rogue causes [Blue Screen Of Death (BSOD)](https://en.wikipedia.org/wiki/Blue_screen_of_death) thanks to the one function in WinAPI called "[NtSetInformationProcess](http://undocumented.ntinternals.net/index.html?page=UserMode%2FUndocumented%20Functions%2FNT%20Objects%2FProcess%2FNtSetInformationProcess.html)". 
+The only way to terminate this rogue is by restarting the computer. It doesn't cause BSOD upon restarting because it fires event called "[SystemEvents_SessionEnding](https://learn.microsoft.com/en-us/dotnet/api/microsoft.win32.systemevents.sessionending?view=windowsdesktop-9.0)" in which the rogue sets itself as a non-critical process.
 
 Getting rid of files that carring the name "Smart Shiled.exe" will not prevent the rogue from executing itself because these files are generated by source files (source file is basically a file dropper whose purpose is to launch "Smart Shield.exe" and after that terminate itself, so it can hide from process managers such as Task Manager and Process Hacker).
 
 The rogue also has a license system. The default version is Trial. This particular version is limited to only 7 days. When the Trial version ends, it launches payloads which comes with generated pcm audio, gdi effects, random inputs and destroying critical system files.
-To make this license system possible, rogue stores data about datetime inside its based key in registry. Based key of this rogue is also used by other features such as Antivirus Center, Junk Cleaner, and Registry Optimizer.
-Rogue does not only stores date into Registry, but also into its based directory. This directory contains resources and text files which are generated and used by previously mentioned features.
+To make this license system possible, rogue stores data about datetime inside its based key in registry **"HKEY_LOCAL_MACHINE\SOFTWARE\Smart Shield"**. Based key of this rogue is also used by other features such as Antivirus Center, Junk Cleaner, and Registry Optimizer.
+Rogue does not only stores data into Registry, but also into its based directory **"C:\Windows\Smart Shield"**. This directory contains resources and text files. Text files are generated and used by previously mentioned features.
 
 When user updates to the Pro Version, most annoying features which includes "Advertisement" and "Notifications" are disabled. The rogue also enables the "Quit" option inside the Tray Icon. Although it actually terminates the rogue, the critical flag remains untouched resulting to instant BSOD.
 
-Keylogger was built via extracted WinAPI functions. Unlike standard keystroke detection which is part of the C# NetFramework4.5, the lowlevel functions from api allows the rogue to detect all keyboard inputs especially outside the application. This is called a Global Keylogger, and it is used vastly by most of keyloggers. Every keystroke which user press is stored into char array. If those combined characters matches with hardcoded forbidden keywords (avast, virus, defender, kaspersty etc.), then the rogue blocks all inputs, and after few seconds it terminates itself which results into BSOD.
+Keylogger was built via extracted WinAPI functions. Unlike standard keystroke detection which provides the C# NetFramework4.5, the lowlevel functions from api allows the rogue to detect all keyboard inputs especially outside the application. This is called a Global Keylogger, and it is used vastly by most of keyloggers. Every keystroke which user presses is stored into char array. If those combined characters matches with hardcoded forbidden keywords (avast, virus, defender, kaspersty etc.), then the rogue blocks all inputs, and after few seconds it terminates itself which results into BSOD.
 
 ## Credits
 **Founder and main developer - CYBER SOLDIER aka Clutter**
