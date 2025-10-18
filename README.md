@@ -39,6 +39,9 @@ Download the **"smart_shieldx64_setup.exe"**, drop it wherever you want to and r
 ## How it works ⚙️?
 Once the user allows to install the rogue, it sets the rogue as a startup application. This is done by multiple methods which are registry, startup folder, and lastly task scheduler. To make it even more confusing, the rogue creates multiple copies of itself with random names and those copies are stored inside random directories. Rogues changes file attributes of these files to hidden. The only way to see these files is to enable "Show hidden files, folders, and drives" option and uncheck the option "Hide protected operating system files (Recommended)" inside "File Explorer Options".
 
+<img src="https://github.com/MalwareStudio/Smart-Shield/blob/main/Screenshots/registry.png" alt="" width="500"/>
+<img src="https://github.com/MalwareStudio/Smart-Shield/blob/main/Screenshots/based_folder.png" alt="" width="500"/>
+
 System appications Registry Editor, Task Manager, and Task Scheduler will be blocked and injected via [Image File Execution Option method (IFEO)](https://learn.microsoft.com/en-us/previous-versions/windows/desktop/xperf/image-file-execution-options). Any attempt of running these applications runs the rogue instead.
 
 It doesn not necessary mean that this rogue is unkillable. The command "[taskkill](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/taskkill)" is still available, however trying to kill the rogue causes [Blue Screen Of Death (BSOD)](https://en.wikipedia.org/wiki/Blue_screen_of_death) thanks to the one function in WinAPI called "[NtSetInformationProcess](http://undocumented.ntinternals.net/index.html?page=UserMode%2FUndocumented%20Functions%2FNT%20Objects%2FProcess%2FNtSetInformationProcess.html)". 
