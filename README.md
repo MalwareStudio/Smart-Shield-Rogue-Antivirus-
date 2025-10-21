@@ -20,6 +20,12 @@ It's worth mentioning that this rogue was created mainly for my content on YouTu
 
 This rogue should be executed inside a safe environment, such as a [virtual computer](https://en.wikipedia.org/wiki/Virtual_machine). There are many brands that you can choose from; the well-known and easy-to-use ones are [Oracle VirtualBox](https://www.virtualbox.org/) (free) and [VMware](https://www.vmware.com/) (paid).
 
+## How to compile it 🔧?
+This project uses custom DLL files. In order to compile it properly in Visual studio, please follow these steps.
+All used dll are located in **"Custom DLL's"**. Please download all DLL files from that folder, if you want to compile the project.
+
+Open **Visual Studio** ⇾ In the **"Solution Explorer"** right click on project name **(RogueAntivirusPatched or Rogue_Installer)** ⇾ Click on the option called **"Add"** ⇾ Then hit the option called **"Reference.."** ⇾ Go to **"Browse"** ⇾ From there click on the button **"Browse.."** and select the **missing DLL** ⇾ Make sure the DLL is **enabled** ✅
+
 ## Guide for noobs 📄
 Because not all of you are developers, I decided to make a quick guide about how to run it properly.
 
