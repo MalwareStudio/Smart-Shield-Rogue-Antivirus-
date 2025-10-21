@@ -24,7 +24,7 @@ This rogue should be executed inside a safe environment, such as a [virtual comp
 This project uses custom DLL files. In order to compile it properly in Visual studio, please follow steps below.
 All used DLL files are located in **"Custom DLL's"** folder. Please download all DLL files from that folder, if you want to compile the project.
 
-**Steps**
+###Steps
 Open **Visual Studio** ⇾ In the **"Solution Explorer"** right click on project name **(RogueAntivirusPatched or Rogue_Installer)** ⇾ Click on the option called **"Add"** ⇾ Then hit the option called **"Reference.."** ⇾ Go to **"Browse"** ⇾ From there click on the button **"Browse.."** and select the **missing DLL** ⇾ Make sure the DLL is **enabled** ✅
 
 ## Guide for noobs 📄
