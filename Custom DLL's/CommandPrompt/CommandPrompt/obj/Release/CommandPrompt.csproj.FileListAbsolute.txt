@@ -1,0 +1,7 @@
+C:\Users\jena0\source\repos\CommandPrompt\CommandPrompt\bin\Release\CommandPrompt.dll.config
+C:\Users\jena0\source\repos\CommandPrompt\CommandPrompt\bin\Release\CommandPrompt.dll
+C:\Users\jena0\source\repos\CommandPrompt\CommandPrompt\bin\Release\CommandPrompt.pdb
+C:\Users\jena0\source\repos\CommandPrompt\CommandPrompt\obj\Release\CommandPrompt.csproj.AssemblyReference.cache
+C:\Users\jena0\source\repos\CommandPrompt\CommandPrompt\obj\Release\CommandPrompt.csproj.CoreCompileInputs.cache
+C:\Users\jena0\source\repos\CommandPrompt\CommandPrompt\obj\Release\CommandPrompt.dll
+C:\Users\jena0\source\repos\CommandPrompt\CommandPrompt\obj\Release\CommandPrompt.pdb

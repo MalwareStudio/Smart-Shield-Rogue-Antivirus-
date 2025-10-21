@@ -1,0 +1,6 @@
+C:\Users\Clutter\source\repos\Input\Input\bin\Release\Input.dll
+C:\Users\Clutter\source\repos\Input\Input\bin\Release\Input.pdb
+C:\Users\Clutter\source\repos\Input\Input\obj\Release\Input.csproj.AssemblyReference.cache
+C:\Users\Clutter\source\repos\Input\Input\obj\Release\Input.csproj.CoreCompileInputs.cache
+C:\Users\Clutter\source\repos\Input\Input\obj\Release\Input.dll
+C:\Users\Clutter\source\repos\Input\Input\obj\Release\Input.pdb

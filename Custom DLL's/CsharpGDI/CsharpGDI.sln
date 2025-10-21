@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32413.511
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpGDI", "CsharpGDI\CsharpGDI.csproj", "{A639878B-EE05-4995-A011-B54C95F403AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A639878B-EE05-4995-A011-B54C95F403AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A639878B-EE05-4995-A011-B54C95F403AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A639878B-EE05-4995-A011-B54C95F403AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A639878B-EE05-4995-A011-B54C95F403AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D08562AC-8FC6-4545-A359-39B9CD3B0CC5}
+	EndGlobalSection
+EndGlobal

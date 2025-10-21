@@ -1,0 +1,12 @@
+C:\Users\Clutter\source\repos\CsharpGDI\CsharpGDI\bin\Release\CsharpGDI.dll
+C:\Users\Clutter\source\repos\CsharpGDI\CsharpGDI\bin\Release\CsharpGDI.pdb
+C:\Users\Clutter\source\repos\CsharpGDI\CsharpGDI\obj\Release\CsharpGDI.csproj.CoreCompileInputs.cache
+C:\Users\Clutter\source\repos\CsharpGDI\CsharpGDI\obj\Release\CsharpGDI.dll
+C:\Users\Clutter\source\repos\CsharpGDI\CsharpGDI\obj\Release\CsharpGDI.pdb
+C:\Users\Clutter\source\repos\CsharpGDI\CsharpGDI\obj\Release\CsharpGDI.csproj.AssemblyReference.cache
+C:\Users\jena0\source\repos\CsharpGDI\CsharpGDI\bin\Release\CsharpGDI.dll
+C:\Users\jena0\source\repos\CsharpGDI\CsharpGDI\bin\Release\CsharpGDI.pdb
+C:\Users\jena0\source\repos\CsharpGDI\CsharpGDI\obj\Release\CsharpGDI.csproj.CoreCompileInputs.cache
+C:\Users\jena0\source\repos\CsharpGDI\CsharpGDI\obj\Release\CsharpGDI.dll
+C:\Users\jena0\source\repos\CsharpGDI\CsharpGDI\obj\Release\CsharpGDI.pdb
+C:\Users\jena0\source\repos\CsharpGDI\CsharpGDI\obj\Release\CsharpGDI.csproj.AssemblyReference.cache

@@ -1,0 +1,6 @@
+C:\Users\Clutter\source\repos\CsharpGDI\CsharpGDI\bin\Debug\CsharpGDI.dll
+C:\Users\Clutter\source\repos\CsharpGDI\CsharpGDI\bin\Debug\CsharpGDI.pdb
+C:\Users\Clutter\source\repos\CsharpGDI\CsharpGDI\obj\Debug\CsharpGDI.csproj.AssemblyReference.cache
+C:\Users\Clutter\source\repos\CsharpGDI\CsharpGDI\obj\Debug\CsharpGDI.csproj.CoreCompileInputs.cache
+C:\Users\Clutter\source\repos\CsharpGDI\CsharpGDI\obj\Debug\CsharpGDI.dll
+C:\Users\Clutter\source\repos\CsharpGDI\CsharpGDI\obj\Debug\CsharpGDI.pdb

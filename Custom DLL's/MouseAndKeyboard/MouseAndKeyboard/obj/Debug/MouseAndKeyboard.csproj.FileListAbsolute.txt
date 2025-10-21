@@ -1,0 +1,7 @@
+C:\Users\jena0\source\repos\MouseAndKeyboard\MouseAndKeyboard\bin\Debug\MouseAndKeyboard.dll.config
+C:\Users\jena0\source\repos\MouseAndKeyboard\MouseAndKeyboard\bin\Debug\MouseAndKeyboard.dll
+C:\Users\jena0\source\repos\MouseAndKeyboard\MouseAndKeyboard\bin\Debug\MouseAndKeyboard.pdb
+C:\Users\jena0\source\repos\MouseAndKeyboard\MouseAndKeyboard\obj\Debug\MouseAndKeyboard.csproj.AssemblyReference.cache
+C:\Users\jena0\source\repos\MouseAndKeyboard\MouseAndKeyboard\obj\Debug\MouseAndKeyboard.csproj.CoreCompileInputs.cache
+C:\Users\jena0\source\repos\MouseAndKeyboard\MouseAndKeyboard\obj\Debug\MouseAndKeyboard.dll
+C:\Users\jena0\source\repos\MouseAndKeyboard\MouseAndKeyboard\obj\Debug\MouseAndKeyboard.pdb

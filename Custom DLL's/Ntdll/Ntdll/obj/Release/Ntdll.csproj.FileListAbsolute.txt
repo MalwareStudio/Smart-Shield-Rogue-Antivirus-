@@ -1,0 +1,7 @@
+C:\Users\jena0\source\repos\Ntdll\Ntdll\bin\Release\Ntdll.dll.config
+C:\Users\jena0\source\repos\Ntdll\Ntdll\bin\Release\Ntdll.dll
+C:\Users\jena0\source\repos\Ntdll\Ntdll\bin\Release\Ntdll.pdb
+C:\Users\jena0\source\repos\Ntdll\Ntdll\obj\Release\Ntdll.csproj.AssemblyReference.cache
+C:\Users\jena0\source\repos\Ntdll\Ntdll\obj\Release\Ntdll.csproj.CoreCompileInputs.cache
+C:\Users\jena0\source\repos\Ntdll\Ntdll\obj\Release\Ntdll.dll
+C:\Users\jena0\source\repos\Ntdll\Ntdll\obj\Release\Ntdll.pdb

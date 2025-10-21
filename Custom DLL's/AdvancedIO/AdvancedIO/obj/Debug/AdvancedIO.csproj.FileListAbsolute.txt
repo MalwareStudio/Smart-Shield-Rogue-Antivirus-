@@ -1,0 +1,7 @@
+C:\Users\jena0\source\repos\AdvancedIO\AdvancedIO\bin\Debug\AdvancedIO.dll.config
+C:\Users\jena0\source\repos\AdvancedIO\AdvancedIO\bin\Debug\AdvancedIO.dll
+C:\Users\jena0\source\repos\AdvancedIO\AdvancedIO\bin\Debug\AdvancedIO.pdb
+C:\Users\jena0\source\repos\AdvancedIO\AdvancedIO\obj\Debug\AdvancedIO.csproj.AssemblyReference.cache
+C:\Users\jena0\source\repos\AdvancedIO\AdvancedIO\obj\Debug\AdvancedIO.csproj.CoreCompileInputs.cache
+C:\Users\jena0\source\repos\AdvancedIO\AdvancedIO\obj\Debug\AdvancedIO.dll
+C:\Users\jena0\source\repos\AdvancedIO\AdvancedIO\obj\Debug\AdvancedIO.pdb

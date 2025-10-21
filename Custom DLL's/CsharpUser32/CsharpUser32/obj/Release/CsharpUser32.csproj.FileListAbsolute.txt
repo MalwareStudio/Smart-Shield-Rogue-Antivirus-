@@ -1,0 +1,7 @@
+C:\Users\jena0\source\repos\CsharpUser32\CsharpUser32\bin\Release\CsharpUser32.dll.config
+C:\Users\jena0\source\repos\CsharpUser32\CsharpUser32\bin\Release\CsharpUser32.dll
+C:\Users\jena0\source\repos\CsharpUser32\CsharpUser32\bin\Release\CsharpUser32.pdb
+C:\Users\jena0\source\repos\CsharpUser32\CsharpUser32\obj\Release\CsharpUser32.csproj.AssemblyReference.cache
+C:\Users\jena0\source\repos\CsharpUser32\CsharpUser32\obj\Release\CsharpUser32.csproj.CoreCompileInputs.cache
+C:\Users\jena0\source\repos\CsharpUser32\CsharpUser32\obj\Release\CsharpUser32.dll
+C:\Users\jena0\source\repos\CsharpUser32\CsharpUser32\obj\Release\CsharpUser32.pdb

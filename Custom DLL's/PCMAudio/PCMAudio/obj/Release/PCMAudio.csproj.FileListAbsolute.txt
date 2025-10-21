@@ -1,0 +1,7 @@
+C:\Users\jena0\source\repos\PCMAudio\PCMAudio\bin\Release\PCMAudio.dll.config
+C:\Users\jena0\source\repos\PCMAudio\PCMAudio\bin\Release\PCMAudio.dll
+C:\Users\jena0\source\repos\PCMAudio\PCMAudio\bin\Release\PCMAudio.pdb
+C:\Users\jena0\source\repos\PCMAudio\PCMAudio\obj\Release\PCMAudio.csproj.AssemblyReference.cache
+C:\Users\jena0\source\repos\PCMAudio\PCMAudio\obj\Release\PCMAudio.csproj.CoreCompileInputs.cache
+C:\Users\jena0\source\repos\PCMAudio\PCMAudio\obj\Release\PCMAudio.dll
+C:\Users\jena0\source\repos\PCMAudio\PCMAudio\obj\Release\PCMAudio.pdb

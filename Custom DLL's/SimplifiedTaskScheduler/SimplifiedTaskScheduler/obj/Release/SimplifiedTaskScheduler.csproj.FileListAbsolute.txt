@@ -1,0 +1,10 @@
+C:\Users\jena0\source\repos\SimplifiedTaskScheduler\SimplifiedTaskScheduler\bin\Release\SimplifiedTaskScheduler.dll.config
+C:\Users\jena0\source\repos\SimplifiedTaskScheduler\SimplifiedTaskScheduler\bin\Release\SimplifiedTaskScheduler.dll
+C:\Users\jena0\source\repos\SimplifiedTaskScheduler\SimplifiedTaskScheduler\bin\Release\SimplifiedTaskScheduler.pdb
+C:\Users\jena0\source\repos\SimplifiedTaskScheduler\SimplifiedTaskScheduler\obj\Release\SimplifiedTaskScheduler.csproj.AssemblyReference.cache
+C:\Users\jena0\source\repos\SimplifiedTaskScheduler\SimplifiedTaskScheduler\obj\Release\Interop.TaskScheduler.dll
+C:\Users\jena0\source\repos\SimplifiedTaskScheduler\SimplifiedTaskScheduler\obj\Release\SimplifiedTaskScheduler.csproj.ResolveComReference.cache
+C:\Users\jena0\source\repos\SimplifiedTaskScheduler\SimplifiedTaskScheduler\obj\Release\SimplifiedTaskScheduler.csproj.CoreCompileInputs.cache
+C:\Users\jena0\source\repos\SimplifiedTaskScheduler\SimplifiedTaskScheduler\obj\Release\SimplifiedTaskScheduler.dll
+C:\Users\jena0\source\repos\SimplifiedTaskScheduler\SimplifiedTaskScheduler\obj\Release\SimplifiedTaskScheduler.pdb
+C:\Users\jena0\source\repos\SimplifiedTaskScheduler\SimplifiedTaskScheduler\bin\Release\SimplifiedTaskScheduler.xml

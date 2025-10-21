@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MouseAndKeyboard", "MouseAndKeyboard\MouseAndKeyboard.csproj", "{30DBD8B2-6B27-49F8-A43C-AB8B77B75B7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30DBD8B2-6B27-49F8-A43C-AB8B77B75B7D}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{30DBD8B2-6B27-49F8-A43C-AB8B77B75B7D}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{30DBD8B2-6B27-49F8-A43C-AB8B77B75B7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30DBD8B2-6B27-49F8-A43C-AB8B77B75B7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3ABFB969-128B-4ACB-ACC5-6CE503FF57FD}
+	EndGlobalSection
+EndGlobal
